@@ -4,6 +4,8 @@ MAINTAINER Pedro de la Lastra <plmarcelo@gmail.com>
 
 RUN apt-get update -qq && \
     apt-get install -y \
+        unzip \
+        git \
         libpng-dev \
         libjpeg62-turbo-dev -qy
 

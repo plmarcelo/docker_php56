@@ -1,2 +1,2 @@
-# docker_php72
-Imágen de Docker con PHP 7.2 + XDebug
+# docker_php56
+Imágen de Docker con PHP 5.6 + XDebug

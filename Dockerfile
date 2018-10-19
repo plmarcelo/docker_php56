@@ -8,10 +8,12 @@ RUN apt-get update -qq && \
         unzip \
         git \
         libmcrypt-dev \
+        libfreetype6-dev \
         libpng-dev \
         libjpeg62-turbo-dev -qy
 
-RUN docker-php-ext-install \
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    docker-php-ext-install \
     pdo \
     pdo_mysql \
     mysqli \

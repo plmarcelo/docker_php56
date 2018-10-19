@@ -2,10 +2,12 @@ FROM php:5.6-apache
 
 MAINTAINER Pedro de la Lastra <plmarcelo@gmail.com>
 
+#Add --no-install-recommends apt-utils
 RUN apt-get update -qq && \
     apt-get install -y \
         unzip \
         git \
+        libmcrypt-dev \
         libpng-dev \
         libjpeg62-turbo-dev -qy
 
@@ -13,6 +15,7 @@ RUN docker-php-ext-install \
     pdo \
     pdo_mysql \
     mysqli \
+    mcrypt \
     opcache \
     gd
 
